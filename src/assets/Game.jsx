@@ -43,12 +43,12 @@ const Game = () => {
             const rollInterval = setInterval(() => {
                 setDiceImg(dices[Math.floor(Math.random() * 6)]);
                 rollCount += 1;
-                if (rollCount >= 10) { // Change 10 to how many times you want to roll
+                if (rollCount >= 10) {
                     clearInterval(rollInterval);
-                    // Set the final dice image after rolling
+                    
                     setDiceImg(dices[randomDice - 1]);
                     
-                    // Update the score
+                  
                     if (number == randomDice) {
                         const update = score + number;
                         setScore(update);
@@ -59,7 +59,7 @@ const Game = () => {
     
                     setNumber(null);
                 }
-            }, 50); // Change 100 to adjust the speed of rolling
+            }, 100); 
         };
     
         rollDice();
